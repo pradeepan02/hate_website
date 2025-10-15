@@ -8,7 +8,10 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     allowedHosts: ["hate-website.onrender.com"],
   },
-  plugins:[react()],
+  plugins: [react()],
+   build: {
+    outDir: 'build', // <- change this from 'dist'
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
